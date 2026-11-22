@@ -30,6 +30,12 @@ const VEGETABLES = [
     search: "fresh carrots",
   },
   {
+    id: "cauliflower",
+    name: "Cauliflower",
+    svg: `<svg viewBox="0 0 100 100"><path d="M40 52h20l-2 24H42z" fill="#f3f0e6"/><circle cx="40" cy="46" r="12" fill="#f7f4ea"/><circle cx="60" cy="46" r="12" fill="#f7f4ea"/><circle cx="50" cy="38" r="13" fill="#fbf9f1"/><circle cx="50" cy="50" r="11" fill="#f3f0e6"/><path d="M30 52c-6-2-8-8-6-14M70 52c6-2 8-8 6-14" stroke="#7aa15f" stroke-width="4" fill="none" stroke-linecap="round"/></svg>`,
+    search: "fresh cauliflower head",
+  },
+  {
     id: "radish",
     name: "Radishes",
     svg: `<svg viewBox="0 0 100 100"><circle cx="50" cy="58" r="24" fill="#e35d6a"/><circle cx="43" cy="51" r="7" fill="#f3939c"/><path d="M50 34c-3-8-1-14 3-18m-3 18c3-8 9-10 13-10" stroke="#4f9c42" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`,
