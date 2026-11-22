@@ -1,0 +1,221 @@
+/* ---- Basic page setup ---- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #2e2a24;
+  background: #fbf7ef;
+  line-height: 1.5;
+}
+
+/* ---- Header ---- */
+.site-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  background: #e9f3e4;
+  border-bottom: 3px solid #cfe3c4;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.tagline {
+  margin: 0.4rem 0 0;
+  color: #5a6b4e;
+}
+
+/* ---- Layout of the steps ---- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.step {
+  margin: 2rem 0;
+}
+
+.step h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: #7aa15f;
+  color: white;
+  font-size: 1rem;
+}
+
+.hint {
+  margin-top: -0.4rem;
+  color: #7a7568;
+  font-size: 0.95rem;
+}
+
+/* ---- The grid of choice cards ---- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.8rem;
+}
+
+.card {
+  background: white;
+  border: 2px solid #e4ddcd;
+  border-radius: 14px;
+  padding: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.08s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card.selected {
+  border-color: #7aa15f;
+  background: #f1f7ec;
+  box-shadow: 0 0 0 3px rgba(122, 161, 95, 0.25);
+}
+
+.card svg {
+  width: 72px;
+  height: 72px;
+}
+
+.card .card-label {
+  display: block;
+  margin-top: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ---- The plan / shopping list ---- */
+.plan {
+  background: white;
+  border: 2px solid #e4ddcd;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+}
+
+.empty-note {
+  color: #9a9484;
+  text-align: center;
+  margin: 0;
+}
+
+.plan h3 {
+  margin-top: 1.2rem;
+}
+
+.brine-box {
+  background: #fff7e6;
+  border: 1px solid #f0dca8;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  margin: 0.6rem 0 1rem;
+}
+
+.shopping-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shopping-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #efe9db;
+}
+
+.shopping-list li:last-child {
+  border-bottom: none;
+}
+
+.buy-link {
+  background: #ff9900;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.buy-link:hover {
+  background: #e88b00;
+}
+
+/* ---- Brine calculator ---- */
+.calc {
+  background: white;
+  border: 2px solid #e4ddcd;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+}
+
+.calc-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.calc-row label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.calc-row select,
+.calc-row input {
+  padding: 0.55rem 0.7rem;
+  border: 2px solid #e4ddcd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fffdf9;
+}
+
+.calc-row select:focus,
+.calc-row input:focus {
+  outline: none;
+  border-color: #7aa15f;
+}
+
+.calc-result {
+  background: #eef5e8;
+  border: 1px solid #cfe3c4;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  font-size: 1.05rem;
+}
+
+.calc-result strong {
+  color: #3f6b2a;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  text-align: center;
+  color: #9a9484;
+  font-size: 0.85rem;
+  padding: 2rem 1rem;
+}

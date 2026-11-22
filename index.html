@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferment Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>🥬 Ferment Planner</h1>
+    <p class="tagline">Pick what you want to ferment, and we'll build your plan and shopping list.</p>
+  </header>
+
+  <main>
+    <!-- STEP 1: choose vegetables -->
+    <section class="step">
+      <h2><span class="step-num">1</span> Choose your vegetables</h2>
+      <p class="hint">Tap one or more. Tap again to unselect.</p>
+      <div class="card-grid" id="veg-grid"></div>
+    </section>
+
+    <!-- STEP 1b: other picklables (eggs, etc.) -->
+    <section class="step">
+      <h2><span class="step-num">+</span> Or pickle something else</h2>
+      <p class="hint">Not a veggie, but great in a jar — eggs, mushrooms, and more.</p>
+      <div class="card-grid" id="other-grid"></div>
+    </section>
+
+    <!-- STEP 2: choose a salt -->
+    <section class="step">
+      <h2><span class="step-num">2</span> Pick a salt</h2>
+      <p class="hint">Salt pulls water out of the veggies and keeps bad microbes away.</p>
+      <div class="card-grid" id="salt-grid"></div>
+    </section>
+
+    <!-- STEP 3: choose a container -->
+    <section class="step">
+      <h2><span class="step-num">3</span> Pick a container</h2>
+      <p class="hint">Where your ferment will live while it bubbles away.</p>
+      <div class="card-grid" id="container-grid"></div>
+    </section>
+
+    <!-- STEP 4: brine calculator -->
+    <section class="step">
+      <h2><span class="step-num">4</span> Brine calculator</h2>
+      <p class="hint">Tells you exactly how much salt to use. Two common methods below.</p>
+
+      <div class="calc">
+        <div class="calc-row">
+          <label for="salt-percent">Salt strength</label>
+          <select id="salt-percent">
+            <option value="2">2% &mdash; standard (sauerkraut, most veg)</option>
+            <option value="2.5">2.5% &mdash; a bit firmer / saltier</option>
+            <option value="3.5">3.5% &mdash; brine for cucumbers & olives</option>
+            <option value="5">5% &mdash; strong brine (long storage)</option>
+          </select>
+        </div>
+
+        <div class="calc-row">
+          <label for="method">Method</label>
+          <select id="method">
+            <option value="brine">Salt-in-water brine (pour over)</option>
+            <option value="dry">Dry salting (rub into shredded veg)</option>
+          </select>
+        </div>
+
+        <div class="calc-row">
+          <label for="amount" id="amount-label">Water amount (grams or ml)</label>
+          <input type="number" id="amount" value="1000" min="0" step="50" />
+        </div>
+
+        <div class="calc-result" id="calc-result"></div>
+      </div>
+    </section>
+
+    <!-- STEP 5: the plan + shopping list (filled in by JavaScript) -->
+    <section class="step">
+      <h2><span class="step-num">5</span> Your plan</h2>
+      <div id="plan" class="plan">
+        <p class="empty-note">Start picking above and your plan will appear here. 🫙</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made for learning. Amazon links are plain product searches for now.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
